@@ -24,8 +24,9 @@ const FriendForm = props => {
     }
     
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="add-form-container">
+            <h2>Add new friend below!</h2>
+            <form className="add-form" onSubmit={handleSubmit}>
                <input 
                className="input"
                type='text'
@@ -50,7 +51,7 @@ const FriendForm = props => {
                onChange={handleChanges}
                placeholder='Add email here'
                />
-               <button type="button" onClick={handleSubmit} className="btn btn-primary add-btn-2">Add Friend</button>
+               <button type="button" onClick={handleSubmit} className="btn btn-2 btn-primary add-btn-2">Add Friend</button>
            </form> 
         </div>
     );

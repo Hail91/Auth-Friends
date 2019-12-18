@@ -26,9 +26,6 @@ const FriendsList = () => {
                   />
                 ))}
                 </div>
-                <div>
-                  <h2>Add new friend below!</h2>
-                </div>
                 <FriendForm friendsList={setFriends} />
             </div>
           );
