@@ -13,9 +13,10 @@ const FriendsList = () => {
         })
         .catch(error => console.log(error))
     }, []);
-    
+
     return ( 
-            <div className="friends-container">  
+            <div className="friends-container">
+              <div className="card-container">
                 {friends.map(info => (
                   <FriendCard
                     key={info.id}
@@ -24,6 +25,10 @@ const FriendsList = () => {
                     email={info.email}
                   />
                 ))}
+                </div>
+                <div>
+                  <h2>Add new friend below!</h2>
+                </div>
                 <FriendForm friendsList={setFriends} />
             </div>
           );

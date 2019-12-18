@@ -6,7 +6,8 @@ const FriendForm = props => {
     const [friend, addFriend] = useState({
         name: '',
         age: '',
-        email: ''
+        email: '',
+        id: Date.now()
     })
 
     const handleChanges = event => {
