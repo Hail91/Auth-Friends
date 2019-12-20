@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import FriendsList from './components/FriendsList';
 import FriendForm from './components/FriendForm';
 import PrivateRoute from './components/PrivateRoute';
+import UpdateFriend from './components/UpdateFriend';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route exact path='/' component={Login} />
             <PrivateRoute path='/friendsList' component={FriendsList} />
             <PrivateRoute path='/addfriend' component={FriendForm} />
+            <PrivateRoute path='/edit-friend' component={UpdateFriend}/>
       </div> 
     </Router>
   );

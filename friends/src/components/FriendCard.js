@@ -1,6 +1,12 @@
-import React  from 'react';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 const FriendCard = (props) => {
+
+    const editFriend = event => {
+        event.preventDefault();
+        props.history.push(`/edit-friend/${props.match.params.id}`)
+    };
       
     return (    
         <div className="card-cont">
@@ -9,7 +15,7 @@ const FriendCard = (props) => {
                     <h5 class="card-title">Name: {props.name}</h5>
                     <h5 class="card-subtitle mb-2 text-muted">Age: {props.age}</h5>
                     <p class="card-text">Email: {props.email}</p>
-                    <button class="btn btn-primary">Edit</button>
+                    <button onClick={editFriend} class="btn btn-primary">Edit</button>
                     <button class="btn btn-primary">Delete</button>
                 </div>
             </div>
@@ -17,4 +23,4 @@ const FriendCard = (props) => {
     )
 };
 
-export default FriendCard;
+export default withRouter(FriendCard);
